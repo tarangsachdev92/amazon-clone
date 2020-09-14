@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /.firebase
-.firebaseConfig.js
+/src/firebaseConfig.js
 /.pnp
 .pnp.js
 
