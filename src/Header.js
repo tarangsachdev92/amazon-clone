@@ -14,6 +14,18 @@ function Header() {
       auth.signOut();
     }
   };
+
+  const userHeaderOption = (
+    <div onClick={handleAuthentication} className="header__option">
+      <span className="header__optionLineOn">
+        Hello {user ? user.email : 'Guest'}
+      </span>
+      <span className="header__optionLineTwo">
+        {user ? 'Sign Out' : 'Sign In'}
+      </span>
+    </div>
+  );
+
   return (
     <div className="header">
       <Link to="/">
@@ -30,17 +42,12 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to={!user ? '/login' : ''}>
-          {/* <Link to={!user && '/login'}> */}
-          <div onClick={handleAuthentication} className="header__option">
-            <span className="header__optionLineOn">
-              Hello {user ? user.email : 'Guest'}
-            </span>
-            <span className="header__optionLineTwo">
-              {user ? 'Sign Out' : 'Sign In'}
-            </span>
-          </div>
-        </Link>
+        {user ? (
+          <div className="header__Link">{userHeaderOption}</div>
+        ) : (
+          <Link to="/login">{userHeaderOption}</Link>
+        )}
+
         <div className="header__option">
           <span className="header__optionLineOn">Returns</span>
           <span className="header__optionLineTwo">& Orders</span>
