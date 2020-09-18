@@ -1,0 +1,16 @@
+firebase init
+select function
+select language - javascript
+? Do you want to use ESLint to catch probable bugs and enforce style? (y/N) y
+? Do you want to install dependencies with npm now? (Y/n) y
+
+function folder will get created in here
+cd function
+
+
+npm install express , cors ,stripe
+
+now make change in index.js like below and now before deploy we can simulate
+
+run this command -> firebase emulators:start
+

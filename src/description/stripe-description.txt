@@ -1,0 +1,16 @@
+npm install @stripe/stripe-js
+npm install @stripe/react-stripe-js
+
+now inside of the app.js 
+
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+
+const promise = loadStripe(
+  'pk_test_51HSRP6AmUocyF4hfigWCMCfLtqrnbblJIxealTrqMjIX1QMjjB7CGaw0EFWOJK90SvuwoLMTFlc11IaJvOzkRgjX00d5G88YPt'
+);
+
+ <Elements stripe={promise}>
+    <Payment />
+ </Elements>
+ 
