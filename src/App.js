@@ -10,6 +10,7 @@ import { useStateValue } from './StateProvider';
 import Payment from './Payment';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
+import Orders from './Orders';
 
 const promise = loadStripe(
   'pk_test_51HSRP6AmUocyF4hfigWCMCfLtqrnbblJIxealTrqMjIX1QMjjB7CGaw0EFWOJK90SvuwoLMTFlc11IaJvOzkRgjX00d5G88YPt'
